@@ -44,6 +44,7 @@ curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d
 | **Jaeger** | [http://localhost:16686](http://localhost:16686) |
 | **Prometheus** | [http://localhost:9090](http://localhost:9090) |
 | **Grafana**    | [http://localhost:3000](http://localhost:3000) |
+| **AWS Lambda Runtime Interface Emulator (RIE) endpoint**    | [http://localhost:9000/2015-03-31/functions/function/invocations](http://localhost:9000/2015-03-31/functions/function/invocations)
 
 > Default Grafana login: `admin` / `admin`
 
@@ -121,3 +122,5 @@ docker compose down -v
 docker compose build --no-cache
 docker compose up
 ```
+
+##
