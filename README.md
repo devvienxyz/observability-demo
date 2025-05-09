@@ -19,17 +19,20 @@ This project simulates an AWS Lambda function locally using Docker, instrumented
 ## 🚀 Getting Started
 
 ### 1. **Clone the repo**
+
 ```bash
 git clone <repo-url>
 cd <project-folder>
 ```
 
 ### 2. **Start the environment**
+
 ```bash
 docker compose up --build
 ```
 
 ### 3. **Invoke the Lambda locally**
+
 ```bash
 curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
 ```
@@ -64,12 +67,15 @@ curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d
 ---
 
 ## 🧪 Testing
+
 Send a POST request to simulate a Lambda invocation:
+
 ```bash
 curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
 ```
 
 Then check:
+
 - **Jaeger** for traces
 - **Prometheus** for metrics (scraped from OTel Collector)
 - **Grafana** (add Prometheus as a data source)
@@ -77,6 +83,7 @@ Then check:
 ---
 
 ## 📦 Poetry Setup (Optional)
+
 If you want to manage Python dependencies locally:
 
 ```bash
@@ -93,12 +100,14 @@ poetry shell
 ---
 
 ## ✅ Notes
+
 - This does **not** require AWS credentials.
 - You can extend this by exporting data to Datadog via OTLP or Agent.
 
 ---
 
 ## 📌 To Do
+
 - Add Loki for log aggregation
 - Export to Datadog (optional: Datadog Agent in Docker)
 - Add sample Grafana dashboards (JSON exports)
@@ -106,6 +115,7 @@ poetry shell
 ---
 
 ## 📘 References
+
 - [OpenTelemetry Docs](https://opentelemetry.io/docs/)
 - [AWS Lambda Runtime Interface Emulator](https://github.com/aws/aws-lambda-runtime-interface-emulator)
 - [Grafana](https://grafana.com/)
