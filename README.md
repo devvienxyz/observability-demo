@@ -123,3 +123,13 @@ poetry shell
 ---
 
 Built for fast demos and observability POCs without touching AWS. ✅
+
+## Other Docker commands
+
+```bash
+# list running docker containers
+docker compose ps
+
+# check lambda logs
+docker compose logs lambda
+```
