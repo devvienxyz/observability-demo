@@ -41,6 +41,7 @@ curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d
 
 | Tool       | URL                       |
 |------------|----------------------------|
+| **OTEL Collector** | [http://otel-collector:4318/v1/traces](http://otel-collector:4318/v1/traces) |
 | **Jaeger** | [http://localhost:16686](http://localhost:16686) |
 | **Prometheus** | [http://localhost:9090](http://localhost:9090) |
 | **Grafana**    | [http://localhost:3000](http://localhost:3000) |
