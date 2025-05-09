@@ -15,6 +15,11 @@ services:
     volumes:
       - ./app:/var/task  # Hot-reload: Mount the local 'app' directory into the container
 
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:latest
+    ports:
+      - "4318:4318"
+
   prometheus:
     image: prom/prometheus:latest
     ports:
