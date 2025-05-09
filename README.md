@@ -1,5 +1,3 @@
-# --- README.md ---
-
 # Local AWS Lambda Observability Demo
 
 This project simulates an AWS Lambda function locally using Docker, instrumented with OpenTelemetry to demonstrate full-stack observability. It integrates tracing, metrics, and dashboards with Jaeger, Prometheus, and Grafana.
@@ -53,7 +51,7 @@ curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d
 
 ## 📂 Project Structure
 
-```
+```txt
 ├── app
 │   ├── app.py             # Lambda handler with OTel tracing
 │   └── Dockerfile         # AWS Lambda base image + deps
