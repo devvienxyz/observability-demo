@@ -2,7 +2,7 @@
 name = "local-lambda-observability"
 version = "0.1.0"
 description = "Local AWS Lambda app with OpenTelemetry, Prometheus, Jaeger, and Grafana"
-authors = ["Keisha Louise Vivien Berondo Bunane <devvien.xyz@gmail.com"]
+authors = ["Keisha Louise Vivien Berondo Bunane <devvien.xyz@gmail.com>"]
 packages = [{include = "app"}]
 
 [tool.poetry.dependencies]
