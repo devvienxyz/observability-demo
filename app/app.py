@@ -15,8 +15,11 @@ AwsLambdaInstrumentor().instrument()
 tracer = trace.get_tracer(__name__)
 
 
-def handler(event, context):
-    with tracer.start_as_current_span("lambda-root-span"):
-        return {"statusCode": 200, "body": json.dumps("Hello from local Lambda!")}
+# def handler(event, context):
+#     with tracer.start_as_current_span("lambda-root-span"):
+#         return {"statusCode": 200, "body": json.dumps("Hello from local Lambda!")}
 
-print("hello")
+# print("hello")
+
+def handler(event, context):
+    return {"statusCode": 200, "body": "ok"}

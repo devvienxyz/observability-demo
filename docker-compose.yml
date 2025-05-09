@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: app/Dockerfile
     ports:
-      - "9000:9000"  # Expose Lambda emulation endpoint
+      - "9000:8080"  # Expose Lambda emulation endpoint
     environment:
       - AWS_REGION=us-east-1
       - AWS_LAMBDA_FUNCTION_NAME=observability-demo-fn  # for emulating Lambda
