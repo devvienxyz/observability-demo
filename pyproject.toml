@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "local-lambda-observability"
+version = "0.1.0"
+description = "Local AWS Lambda app with OpenTelemetry, Prometheus, Jaeger, and Grafana"
+authors = ["Keisha Louise Vivien Berondo Bunane <devvien.xyz@gmail.com"]
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "*"
+requests = "*"
+opentelemetry-sdk = "*"
+opentelemetry-exporter-otlp = "*"
+opentelemetry-instrumentation = "*"
+opentelemetry-instrumentation-aws-lambda = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+# Ruff Linter and Formatter Configuration
+line-length = 100
+exclude = ["__pycache__", ".tox", ".venv", "tests/data"]
+select = ["E", "W", "F", "C"]
+
+[tool.mypy]
+# Mypy Type Checker Configuration
+python_version = "3.12"
+ignore_missing_imports = true
+disallow_untyped_defs = true
