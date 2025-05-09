@@ -3,12 +3,11 @@ FROM public.ecr.aws/lambda/python:3.12
 # Set the working directory in the container
 WORKDIR /var/task
 
-# Copy Poetry files for dependency management
-COPY pyproject.toml poetry.lock ./
+# Copy the requirements.txt into the container
+COPY requirements.txt ./
 
-# Install Poetry and dependencies
-RUN pip install poetry && poetry config virtualenvs.create false \
-    && poetry install --no-root
+# Install dependencies using pip
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code
 COPY . .

@@ -80,23 +80,6 @@ Then check:
 
 ---
 
-## 📦 Poetry Setup (Optional)
-
-If you want to manage Python dependencies locally:
-
-```bash
-# Install Poetry
-curl -sSL https://install.python-poetry.org | python3 -
-
-# Install dependencies
-poetry install
-
-# Activate virtual environment
-poetry shell
-```
-
----
-
 ## ✅ Notes
 
 - This does **not** require AWS credentials.
