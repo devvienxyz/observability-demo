@@ -124,4 +124,16 @@ docker compose build --no-cache
 docker compose up
 ```
 
-##
+## Sample requests
+
+### OTEL-Collector
+
+```bash
+curl -X POST http://localhost:4318/v1/traces -H "Content-Type: application/json" -d '{}'
+```
+
+### Lambda
+
+```bash
+curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
+```
