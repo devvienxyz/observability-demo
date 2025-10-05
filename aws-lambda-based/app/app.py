@@ -1,11 +1,11 @@
+import json
+
 from opentelemetry import trace
+from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 from opentelemetry.instrumentation.aws_lambda import AwsLambdaInstrumentor
 from opentelemetry.sdk.resources import SERVICE_NAME, Resource
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
-
-import json
 
 # Set up OpenTelemetry tracer provider
 trace.set_tracer_provider(TracerProvider(resource=Resource.create({SERVICE_NAME: "local-lambda"})))
